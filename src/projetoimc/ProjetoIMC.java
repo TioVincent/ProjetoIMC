@@ -9,6 +9,9 @@ public class ProjetoIMC {
     public static final int ABAIXO_DO_PESO = 0;
     public static final int PESO_IDEAL = 1;
     public static final int ACIMA_DO_PESO = 2;
+    
+    public static final String MASCULINO = "M";
+    public static final String FEMININO = "F";
 
     private String sexo;
     private double estatura;
@@ -23,7 +26,7 @@ public class ProjetoIMC {
     public int calcular() {
         double imcGeral = calcularImcGeral();
 
-        if (sexo.equals("M")) {
+        if (sexo.equals(MASCULINO)) {
             return calcularImcHomem(imcGeral);
         } else {
             return calcularImcMulher(imcGeral);
