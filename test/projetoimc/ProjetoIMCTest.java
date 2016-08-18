@@ -15,7 +15,7 @@ public class ProjetoIMCTest {
     public void testHomemAbaixoDoPeso() {
         ProjetoIMC projeto = new ProjetoIMC("M", 1.90, 50);
         
-        int esperado = 0;
+        int esperado = ProjetoIMC.ABAIXO_DO_PESO;
         int resultado = projeto.calcular();
         
         assertEquals(esperado, resultado);
@@ -26,7 +26,7 @@ public class ProjetoIMCTest {
     public void testHomemNoPesoIdeal() {
         ProjetoIMC projeto = new ProjetoIMC("M", 1.70, 70);
         
-        int esperado = 1;
+        int esperado = ProjetoIMC.PESO_IDEAL;
         int resultado = projeto.calcular();
         
         assertEquals(esperado, resultado);
@@ -37,7 +37,7 @@ public class ProjetoIMCTest {
     public void testHomemAcimaDoPeso() {
         ProjetoIMC projeto = new ProjetoIMC("M", 1.50, 90);
         
-        int esperado = 2;
+        int esperado = ProjetoIMC.ACIMA_DO_PESO;
         int resultado = projeto.calcular();
         
         assertEquals(esperado, resultado);
@@ -48,7 +48,7 @@ public class ProjetoIMCTest {
     public void testMulherAbaixoDoPeso() {
         ProjetoIMC projeto = new ProjetoIMC("F", 1.90, 40);
         
-        int esperado = 0;
+        int esperado = ProjetoIMC.ABAIXO_DO_PESO;
         int resultado = projeto.calcular();
         
         assertEquals(esperado, resultado);
@@ -59,7 +59,7 @@ public class ProjetoIMCTest {
     public void testMulherNoPesoIdeal() {
         ProjetoIMC projeto = new ProjetoIMC("F", 1.70, 60);
         
-        int esperado = 1;
+        int esperado = ProjetoIMC.PESO_IDEAL;
         int resultado = projeto.calcular();
         
         assertEquals(esperado, resultado);
@@ -70,7 +70,7 @@ public class ProjetoIMCTest {
     public void testMulherAcimaDoPeso() {
         ProjetoIMC projeto = new ProjetoIMC("F", 1.50, 90);
         
-        int esperado = 2;
+        int esperado = ProjetoIMC.ACIMA_DO_PESO;
         int resultado = projeto.calcular();
         
         assertEquals(esperado, resultado);
